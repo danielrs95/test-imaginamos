@@ -1,5 +1,6 @@
 import React from 'react';
 import categories from '../assets/categories.json';
+import Category from './Category';
 
 const Categories = () => {
   return (
@@ -13,14 +14,9 @@ const Categories = () => {
           <div className=''></div>
           <span>Categories</span>
         </div>
-        <div className='col-1 border rounded-pill'>
-          <img
-            src={categories[0].icon}
-            className='border rounded-circle p-2 mt-3'
-            alt='...'
-          />
-          <div className='mt-3 mb-5 text-center'>{categories[0].name}</div>
-        </div>
+        {categories.map((category) => (
+          <Category category={category} />
+        ))}
       </div>
     </div>
   );
