@@ -2,6 +2,7 @@ import React from 'react';
 import Categories from './components/Categories';
 import HomeHeader from './components/HomeHeader';
 import Navbar from './components/Navbar';
+import Products from './components/Products';
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
       <Navbar />
       <HomeHeader />
       <Categories />
+      <Products />
     </>
   );
 };
