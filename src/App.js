@@ -9,13 +9,15 @@ const App = () => {
     <>
       <div className='container-fluid'>
         <div className='row'>
-          <div className='col-8'>
+          <div className='col-9'>
             <Navbar />
             <HomeHeader />
             <Categories />
             <Products />
           </div>
-          <div className='col-4'>Cart Items</div>
+          <div className='col-3' style={{ backgroundColor: '#fdfdfb' }}>
+            Cart Items
+          </div>
         </div>
       </div>
     </>
