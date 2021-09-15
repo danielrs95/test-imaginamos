@@ -12,7 +12,6 @@ const Categories = () => {
             <span>Boton delivery</span>
           </div>
           <div className=''></div>
-          <span>Categories</span>
         </div>
         {categories.map((category) => (
           <Category category={category} />
