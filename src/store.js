@@ -1,7 +1,10 @@
 import { createStore, combineReducers } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import { cartReducer } from './reducers/cartReducers';
 
-const reducer = combineReducers({});
+const reducer = combineReducers({
+  cart: cartReducer,
+});
 
 const initialState = {};
 
