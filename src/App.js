@@ -7,10 +7,17 @@ import Products from './components/Products';
 const App = () => {
   return (
     <>
-      <Navbar />
-      <HomeHeader />
-      <Categories />
-      <Products />
+      <div className='container-fluid'>
+        <div className='row'>
+          <div className='col-8'>
+            <Navbar />
+            <HomeHeader />
+            <Categories />
+            <Products />
+          </div>
+          <div className='col-4'>Cart Items</div>
+        </div>
+      </div>
     </>
   );
 };
