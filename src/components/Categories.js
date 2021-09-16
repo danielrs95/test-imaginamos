@@ -7,8 +7,8 @@ const Categories = () => {
     <div className='container mt-4'>
       <div className='row'>
         <div className='col-12'>
-          <div className='d-flex justify-content-between'>
-            <div className='d-flex align-items-center'>
+          <div className='d-flex flex-column d-md-flex flex-md-row justify-content-md-between'>
+            <div className='d-flex justify-content-center align-items-md-center'>
               <h1>Restaurantes</h1>
               <img
                 src='/icons/1046784.svg'
