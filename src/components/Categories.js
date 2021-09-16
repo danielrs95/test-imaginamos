@@ -17,38 +17,30 @@ const Categories = () => {
                 style={{ width: '2.5rem' }}
               />
             </div>
-            <div class='btn-group'>
+            <div className='btn-group'>
               <button
                 type='button'
-                class='btn dropdown-toggle text-light px-5 rounded-pill'
+                className='btn dropdown-toggle text-light px-5 rounded-pill'
                 data-bs-toggle='dropdown'
                 aria-expanded='false'
                 style={{ backgroundColor: '#ff6223' }}
               >
-                <i class='far fa-clock'></i>
+                <i className='far fa-clock'></i>
                 <span className='mx-2'>Delivery: </span>
                 <strong>Now</strong>
               </button>
-              <ul class='dropdown-menu'>
+              <ul className='dropdown-menu'>
                 <li>
-                  <a class='dropdown-item' href='#'>
-                    Later
-                  </a>
+                  <span className='dropdown-item'>Later</span>
                 </li>
                 <li>
-                  <a class='dropdown-item' href='#'>
-                    Another action
-                  </a>
+                  <span className='dropdown-item'>Another action</span>
                 </li>
                 <li>
-                  <a class='dropdown-item' href='#'>
-                    Something else here
-                  </a>
+                  <span className='dropdown-item'>Something else here</span>
                 </li>
                 <li>
-                  <a class='dropdown-item' href='#'>
-                    Separated link
-                  </a>
+                  <span className='dropdown-item'>Separated link</span>
                 </li>
               </ul>
             </div>

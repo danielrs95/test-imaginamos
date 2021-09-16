@@ -7,7 +7,7 @@ const Navbar = () => {
       style={{ width: 'inherit', zIndex: '999' }}
     >
       <div className='container-fluid'>
-        <a className='navbar-brand' href='7'>
+        <a className='navbar-brand' href='/'>
           ImaginWeb
         </a>
         <button
@@ -27,14 +27,14 @@ const Navbar = () => {
         >
           <form className='d-flex w-100'>
             <input
-              className='form-control me-2 w-100'
+              className='form-control me-2 w-100 rounded-pill'
               type='search'
               placeholder='Search'
               aria-label='Search'
             />
-            <button className='btn btn-outline-success' type='button'>
+            {/* <button className='btn btn-outline-success' type='button'>
               Search
-            </button>
+            </button> */}
           </form>
         </div>
       </div>

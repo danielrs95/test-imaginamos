@@ -10,7 +10,9 @@ const ShoppingCart = () => {
       <div className='row'>
         <div className='col-12'>
           {cartItems.length === 0 ? (
-            <h4 style={{ color: '#ff6223' }}>
+            <h4 className='text-dark'>
+              <i className='fas fa-exclamation-triangle'></i>
+              <br></br>
               Your cart is empty, add something!
             </h4>
           ) : (
