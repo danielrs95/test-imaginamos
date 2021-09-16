@@ -5,12 +5,6 @@ import { addToCart } from '../actions/cartActions';
 const Product = ({ product }) => {
   const dispatch = useDispatch();
 
-  const cart = useSelector((state) => state.cart);
-
-  const { cartItems } = cart;
-
-  const test = cartItems.find((x) => x.id === product.id);
-
   const addToCartHandler = (product) => {
     dispatch(addToCart(product));
   };
@@ -33,8 +27,6 @@ const Product = ({ product }) => {
           {product.time}
         </span>
       </div>
-
-      <h1>{test ? test.qty : <></>}</h1>
 
       <div>
         <h5 className='mt-2'>{product.name}</h5>

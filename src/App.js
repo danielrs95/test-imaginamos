@@ -3,6 +3,7 @@ import Categories from './components/Categories';
 import HomeHeader from './components/HomeHeader';
 import Navbar from './components/Navbar';
 import Products from './components/Products';
+import ShoppingCart from './components/ShoppingCart';
 
 const App = () => {
   return (
@@ -16,7 +17,7 @@ const App = () => {
             <Products />
           </div>
           <div className='col-3' style={{ backgroundColor: '#fdfdfb' }}>
-            Cart Items
+            <ShoppingCart />
           </div>
         </div>
       </div>

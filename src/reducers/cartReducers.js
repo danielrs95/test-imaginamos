@@ -15,16 +15,13 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
       const product = action.payload;
 
       // Buscamos si el item ya está en el cartItems, en caso de que esté le sumamos 1 al qty
-      const productOnCart = state.cartItems.find((x) => x.id === product.id);
+      const exist = state.cartItems.find((x) => x.id === product.id);
 
-      if (productOnCart) {
-        let plusQty = { ...productOnCart, qty: product.qty + 1 };
-
+      if (exist) {
+        // Si encuentra el producto en el cartItem lo reemplaza aumentando la cantidad en 1
         let newState = state.cartItems.map((x) =>
-          x.id === product.id ? plusQty : x
+          x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
         );
-
-        console.log(newState);
 
         return {
           cartItems: newState,
