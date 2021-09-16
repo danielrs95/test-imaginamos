@@ -22,14 +22,14 @@ const Navbar = () => {
           className='collapse navbar-collapse ms-5'
           id='navbarSupportedContent'
         >
-          <form className='d-flex ms-auto'>
+          <form className='d-flex w-100'>
             <input
-              className='form-control me-2'
+              className='form-control me-2 w-100'
               type='search'
               placeholder='Search'
               aria-label='Search'
             />
-            <button className='btn btn-outline-success' type='submit'>
+            <button className='btn btn-outline-success' type='button'>
               Search
             </button>
           </form>
