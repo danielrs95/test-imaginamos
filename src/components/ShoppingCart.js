@@ -32,6 +32,22 @@ const ShoppingCart = () => {
               </h3>
             )}
           </div>
+          <div className='d-flex mt-5 justify-content-end '>
+            <button
+              className='btn btn-warning p-3 fw-bold'
+              style={{ borderRadius: '1.5rem' }}
+            >
+              <div className='d-flex align-items-center'>
+                <span>Checkout</span>
+                <img
+                  src='/icons/109617.svg'
+                  className='mx-2'
+                  alt='...'
+                  style={{ height: '2rem' }}
+                />
+              </div>
+            </button>
+          </div>
         </div>
       </div>
     </div>
