@@ -12,7 +12,7 @@ const HomeHeader = () => {
           }}
         >
           <div className='row '>
-            <div className='col-12 col-lg-4  justify-content-center'>
+            <div className='col-12 col-md-4  justify-content-center'>
               <img
                 src='/images/headerimage.png'
                 className='img-fluid '
@@ -20,7 +20,7 @@ const HomeHeader = () => {
               />
             </div>
 
-            <div className='d-flex flex-column col-12 col-lg-6 text-center text-light justify-content-center'>
+            <div className='col-12 d-md-flex flex-md-column col-md-6 text-center text-light justify-content-center'>
               <h1 className='card-text fw-bold' style={{ color: '#ff6223' }}>
                 $0 delivery for 30 days!{' '}
                 <img src='/images/d.png' className='img-fluid ' alt='...' />
@@ -30,8 +30,8 @@ const HomeHeader = () => {
               </p>
             </div>
 
-            <div className='d-flex  align-items-end col-lg-2 '>
-              <div
+            <div className='col-12 justify-content-center d-flex d-md-flex col-md-2 align-items-md-end   '>
+              <button
                 className='btn p-2 text-light rounded-pill mb-3 me-2'
                 data-bs-toggle='dropdown'
                 aria-expanded='false'
@@ -40,7 +40,7 @@ const HomeHeader = () => {
                 <strong className='d-block ' style={{ color: '#ff6223' }}>
                   Learn more <i className='fas fa-arrow-right'></i>
                 </strong>
-              </div>
+              </button>
             </div>
           </div>
         </div>
