@@ -17,8 +17,8 @@ const App = () => {
             <Products />
           </div>
           <div
-            className='col-3 position-fixed top-0 end-0'
-            style={{ backgroundColor: '#fdfdfb' }}
+            className='col-3 position-fixed top-0 end-0 h-100'
+            style={{ backgroundColor: '#fdfdfb', zIndex: '9999' }}
           >
             <div className='container'>
               <div className='row'>

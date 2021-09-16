@@ -4,9 +4,9 @@ const Navbar = () => {
   return (
     <nav
       className='navbar position-fixed navbar-expand-lg navbar-light bg-light'
-      style={{ width: 'inherit', zIndex: '9999' }}
+      style={{ width: 'inherit', zIndex: '999' }}
     >
-      <div className='container'>
+      <div className='container-fluid'>
         <a className='navbar-brand' href='7'>
           ImaginWeb
         </a>

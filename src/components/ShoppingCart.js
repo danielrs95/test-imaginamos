@@ -10,12 +10,14 @@ const ShoppingCart = () => {
       <div className='row'>
         <div className='col-12'>
           {cartItems.length === 0 ? (
-            <div>Cart Item empty</div>
+            <h4 style={{ color: '#ff6223' }}>
+              Your cart is empty, add something!
+            </h4>
           ) : (
             cartItems.map((item) => <CartItem item={item} />)
           )}
-          <div className='col-12 d-flex justify-content-between'>
-            <h3>Total</h3>
+          <div className='col-12 d-flex justify-content-between border-bottom pb-2 mt-5'>
+            <h3 style={{ color: '#ff6223' }}>Total</h3>
 
             {cartItems.length === 0 ? (
               <h3>$0</h3>
