@@ -2,7 +2,7 @@ import React from 'react';
 
 const HomeHeader = () => {
   return (
-    <div className='container mt-4'>
+    <div className='container mt-5 pt-5'>
       <div className='row justify-content-center'>
         <div
           className='col-12 container d-flex justify-content-evenly'

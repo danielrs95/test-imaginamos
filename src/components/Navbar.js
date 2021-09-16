@@ -2,7 +2,10 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <nav className='navbar navbar-expand-lg navbar-light bg-light'>
+    <nav
+      className='navbar position-fixed navbar-expand-lg navbar-light bg-light'
+      style={{ width: 'inherit', zIndex: '9999' }}
+    >
       <div className='container'>
         <a className='navbar-brand' href='7'>
           ImaginWeb

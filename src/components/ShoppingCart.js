@@ -6,7 +6,7 @@ const ShoppingCart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
 
   return (
-    <div className='container'>
+    <div className='container my-5 py-5'>
       <div className='row'>
         <div className='col-12'>
           {cartItems.length === 0 ? (
