@@ -1,12 +1,16 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../actions/cartActions';
+import { addToCart, removeFromCart } from '../actions/cartActions';
 
 const Product = ({ product }) => {
   const dispatch = useDispatch();
 
   const addToCartHandler = (product) => {
     dispatch(addToCart(product));
+  };
+
+  const removeFromCartHandler = (product) => {
+    dispatch(removeFromCart(product));
   };
 
   // Traemos el estado
@@ -53,7 +57,7 @@ const Product = ({ product }) => {
               <button
                 type='button'
                 className='mx-1 btn btn-outline-dark '
-                onClick={() => addToCartHandler(product)}
+                onClick={() => removeFromCartHandler(product)}
               >
                 Remove 1
               </button>

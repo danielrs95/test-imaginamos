@@ -1,4 +1,4 @@
-import { CART_ADD_ITEM } from '../constants/cartConstants';
+import { CART_ADD_ITEM, CART_REMOVE_ITEM } from '../constants/cartConstants';
 
 export const cartReducer = (state = { cartItems: [] }, action) => {
   switch (action.type) {
@@ -30,6 +30,33 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
         return {
           ...state,
           cartItems: [...state.cartItems, product],
+        };
+      }
+
+    case CART_REMOVE_ITEM:
+      // action.payload == product.id, asi lo estamos enviando desde la accion
+
+      const existRemove = state.cartItems.find((x) => x.id === action.payload);
+
+      if (existRemove) {
+        // Si encuentra el producto en el cartItem lo reemplaza aumentando la cantidad en 1
+        let newState = state.cartItems.map((x) =>
+          x.id === action.payload
+            ? { ...existRemove, qty: existRemove.qty - 1 }
+            : x
+        );
+
+        return {
+          cartItems: newState,
+        };
+      } else {
+        /**
+         * Como vamos a remover, vamos a filtrar el item que estamos removiendo
+         * Vamos a filtrar todos los que el x.id no coincida con el payload
+         */
+        return {
+          ...state,
+          cartItems: state.cartItems.filter((x) => x.id !== action.payload),
         };
       }
 
