@@ -2,8 +2,6 @@ import React from 'react';
 
 const RightNavbar = () => {
   return (
-    // <div className='container'>
-    //   <div className='row'>
     <>
       <div className='col-12'>
         <span
@@ -39,8 +37,6 @@ const RightNavbar = () => {
         </div>
       </div>
     </>
-    // {/* </div>
-    // </div> */}
   );
 };
 
