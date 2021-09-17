@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../actions/cartActions';
 
 const Product = ({ product }) => {
@@ -8,6 +8,12 @@ const Product = ({ product }) => {
   const addToCartHandler = (product) => {
     dispatch(addToCart(product));
   };
+
+  // Traemos el estado
+  const cartItems = useSelector((state) => state.cart.cartItems);
+
+  // Verificamos si ya existe el item en el carrito para saber que botones mostraremos luego
+  const exist = cartItems.find((x) => x.id === product.id);
 
   return (
     <div className='col-10 col-md-8 col-lg-6 col-xl-4 mt-5'>
@@ -35,13 +41,32 @@ const Product = ({ product }) => {
           <i className='far fa-star'></i>
           <span className='mx-2'>{product.qualification}</span>
           <span className='mx-2 text-muted'>${product.price}</span>
-          <button
-            type='button'
-            className='btn btn-outline-dark '
-            onClick={() => addToCartHandler(product)}
-          >
-            Add to cart
-          </button>
+          {exist ? (
+            <div>
+              <button
+                type='button'
+                className='mx-1 btn btn-outline-dark '
+                onClick={() => addToCartHandler(product)}
+              >
+                Add more
+              </button>
+              <button
+                type='button'
+                className='mx-1 btn btn-outline-dark '
+                onClick={() => addToCartHandler(product)}
+              >
+                Remove 1
+              </button>
+            </div>
+          ) : (
+            <button
+              type='button'
+              className='btn btn-outline-dark '
+              onClick={() => addToCartHandler(product)}
+            >
+              Add to cart
+            </button>
+          )}
         </div>
       </div>
     </div>

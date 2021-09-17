@@ -13,10 +13,10 @@ const CartItem = ({ item }) => {
           />
         </div>
         <div className='col-12 d-lg-flex align-items-lg-center justify-content-lg-between col-xxl-6 text-center '>
-          <span className='fw-bold'>
+          <span className='fw-bold mx-1 px-1'>
             {item.qty} x {item.name}
           </span>
-          <span className='text-muted'>${item.price}</span>
+          <span className='text-muted mx-1'>${item.price}</span>
         </div>
       </div>
     </>
