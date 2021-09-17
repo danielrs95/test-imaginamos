@@ -38,7 +38,7 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
 
       const existRemove = state.cartItems.find((x) => x.id === action.payload);
 
-      if (existRemove) {
+      if (existRemove && existRemove.qty > 1) {
         // Si encuentra el producto en el cartItem lo reemplaza aumentando la cantidad en 1
         let newState = state.cartItems.map((x) =>
           x.id === action.payload
