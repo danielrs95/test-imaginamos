@@ -10,7 +10,7 @@ const Product = ({ product }) => {
   };
 
   return (
-    <div className='col-4 mt-5'>
+    <div className='col-10 col-md-8 col-lg-6 col-xl-4 mt-5'>
       <div className='position-relative'>
         <img
           src={product.image}
