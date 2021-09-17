@@ -2,8 +2,8 @@ import React from 'react';
 
 const CartItem = ({ item }) => {
   return (
-    <div className='my-4 d-flex row align-items-center'>
-      <div className='col-3'>
+    <>
+      <div className='col-12 col-xxl-6'>
         <img
           src={item.image}
           className='img-fluid bg-light'
@@ -11,11 +11,13 @@ const CartItem = ({ item }) => {
           style={{ borderRadius: ' 1rem' }}
         />
       </div>
-      <div className='col-6 fw-bold'>
-        {item.qty} x {item.name}
+      <div className='col-12 d-lg-flex align-items-lg-center justify-content-lg-between col-xxl-6 text-center '>
+        <span className='fw-bold'>
+          {item.qty} x {item.name}
+        </span>
+        <span className='text-muted'>${item.price}</span>
       </div>
-      <div className='col-3 text-muted'>${item.price}</div>
-    </div>
+    </>
   );
 };
 
