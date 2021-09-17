@@ -20,7 +20,7 @@ const Product = ({ product }) => {
   const exist = cartItems.find((x) => x.id === product.id);
 
   return (
-    <div className='col-10 col-md-8 col-lg-6 col-xl-4 mt-5'>
+    <div className='col-10 col-md-8 col-lg-6 col-xxl-4 mt-5'>
       <div className='position-relative'>
         <img
           src={product.image}
@@ -49,17 +49,17 @@ const Product = ({ product }) => {
             <div>
               <button
                 type='button'
-                className='mx-1 btn btn-outline-dark '
+                className='p-1 mx-1 btn btn-outline-dark '
                 onClick={() => addToCartHandler(product)}
               >
                 Add more
               </button>
               <button
                 type='button'
-                className='mx-1 btn btn-outline-dark '
+                className='p-1 mx-1 btn btn-outline-dark '
                 onClick={() => removeFromCartHandler(product)}
               >
-                Remove 1
+                Remove
               </button>
             </div>
           ) : (
